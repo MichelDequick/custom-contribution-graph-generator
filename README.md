@@ -1,4 +1,4 @@
-# custom-contribution-graph
+# custom-contribution-graph-generator
 
 ## Instructions
 1. Clone this repo `git clone https://github.com/MichelDequick/custom-contribution-graph-generator.git`
