@@ -32,13 +32,15 @@ class PixelGrid:
         self.img = np.zeros((self.window_y, self.window_x,3), np.uint8)
         self.img[:] = [255, 255, 255]
 
-        ############### Draw grid
+        # Draw grid
         for x in range(0, self.grid_x):
             for y in range(0, self.grid_y):
                 self.drawBlock(x, y, (235, 237, 240))
 
         cv2.namedWindow('Github Contributions Calendar Generator')
         cv2.setMouseCallback('Github Contributions Calendar Generator', self.mouseHandler)
+
+        print("Controls -> LMB: Draw | RMB: Erase | Confirm with ENTER")
         while(True):
             cv2.imshow('Github Contributions Calendar Generator',self.img)
             key = cv2.waitKey(1) & 0xFF
@@ -48,11 +50,7 @@ class PixelGrid:
                 break
             elif key == ord('x'):
                 sys.exit(0)
-
         cv2.destroyAllWindows()
-
-        np.set_printoptions(linewidth=128)
-        print(self.grid)
         return self.grid
 
 
