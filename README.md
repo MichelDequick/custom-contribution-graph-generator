@@ -13,6 +13,6 @@
 
 ## Example
 ### UI
-![UI](ui.png)
+![UI](images/ui.png)
 ### Result
-![Result](result.png)
+![Result](images/result.png)
