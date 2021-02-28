@@ -11,6 +11,24 @@
     - Add your new repository as the new origin `git add origin <your repo>`
 7. Push your clone back to github, done!
 
+## Parameters
+```
+python custom-contribution-graph-generator <custom repo name>
+    positional arguments:
+    repo_name             repository to create
+
+    optional arguments:
+    -h, --help            show this help message and exit
+    
+    -m MAX_COMMITS_A_DAY, --max-commits-a-day MAX_COMMITS_A_DAY
+                            Maximum amount of commits a day 
+                            (Default: 100)
+
+    -y YEAR, --year YEAR  specify a specific year 
+                            Example: 2010, 2018, 2020 
+                            (Default: one year ago today)
+```
+
 ## Example
 ### UI
 ![UI](images/ui.png)
