@@ -25,7 +25,6 @@ parser.add_argument('-m', '--max-commits-a-day', type=int,
                     default='100',
                     help='Maximum amount of commits a day \n(Default: 100)')
 parser.add_argument('-y', '--year', type=int,
-                    default='2020',
                     help='specify a specific year \nExample: 2010, 2018, 2020 \n(Default: one year ago today)')
 args = parser.parse_args()
 
@@ -41,6 +40,7 @@ os.chdir(headdir)
 repo = Repo.init(os.path.join(repo_name))
 
 # Set start date
+
 if args.year:
     start_date = datetime(args.year, 1, 1)
 else:
